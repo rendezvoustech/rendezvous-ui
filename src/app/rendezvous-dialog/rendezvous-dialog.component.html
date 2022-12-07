@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Rendezvous Owner <em>{{ participant.name }}</em></h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name" type="string" [(ngModel)]="rendezvousName" name="name">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="createRendezvous()" cdkFocusInitial>Create Rendezvous</button>
+</div>

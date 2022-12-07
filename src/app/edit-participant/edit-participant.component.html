@@ -1,0 +1,12 @@
+<div class="grid-container" *ngIf="participant">
+    <app-participant-form
+            buttonText="Update Participant"
+            titleText="Edit Participant"
+            [currentParticipant]="participant"
+            (onSubmit)="onSubmit($event)">
+    </app-participant-form>
+</div>
+
+<div class="grid-container" *ngIf="!participant">
+    <mat-spinner></mat-spinner>
+</div>

@@ -1,0 +1,20 @@
+<div class="grid-container">
+    <h1 class="mat-h1">My Rendezvous</h1>
+    <mat-grid-list [cols]="colNumber | async" rowHeight="380px">
+        <mat-grid-tile *ngFor="let rz of rendezvous" colspan="1" rowspan="1">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        Rendezvous #{{rz.id}}
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashboard-card-content">
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">Rendezvous: {{ rz.name }}</mat-list-item>
+                        <mat-list-item role="listitem">Owner: {{ rz.ownerId }}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
